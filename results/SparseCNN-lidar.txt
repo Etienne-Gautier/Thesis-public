@@ -1,0 +1,40 @@
+(tensorflow2) C:\Workspace\Thesis\code>python sparse_cnn.py
+-------------------------------Sparsity rate: 0.5----------------------------------------
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+866/866 [==============================] - 3077s 4s/step - loss: 4.2630 - SparseMAE: 2.1224
+[4.262955527726827, 1.6993724]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+909/909 [==============================] - 3107s 3s/step - loss: 5.1339 - SparseMAE: 1.8976
+[5.133870653062239, 1.8975887]
+-------------------------------Sparsity rate: 0.25----------------------------------------
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+866/866 [==============================] - 3131s 4s/step - loss: 3.3043 - SparseMAE: 0.6527
+[3.3042581886328395, 0.5450495]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+909/909 [==============================] - 3232s 4s/step - loss: 4.0236 - SparseMAE: 0.6459
+[4.023614258656014, 0.64585245]
+-------------------------------Sparsity rate: 0.125----------------------------------------
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+866/866 [==============================] - 3394s 4s/step - loss: 4.1499 - SparseMAE: 0.8061
+[4.14989719372974, 0.6704889]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+909/909 [==============================] - 3681s 4s/step - loss: 5.1453 - SparseMAE: 0.8264
+[5.145327327930757, 0.82643175]
+-------------------------------Sparsity rate: 0.06666666666666667----------------------------------------
+Epoch 1/2
+8500/8500 [==============================] - 28479s 3s/step - loss: 9.1797 - SparseMAE: 3.2231
+Epoch 2/2
+8500/8500 [==============================] - 28369s 3s/step - loss: 8.7111 - SparseMAE: 1.7410
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+[5.5273352064725705, 0.97618884]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+[6.987572069674304, 1.178557]
+-------------------------------Sparsity rate: 0.04----------------------------------------
+Epoch 1/2
+8500/8500 [==============================] - 28471s 3s/step - loss: 20.5076 - SparseMAE: 6.3336
+Epoch 2/2
+8500/8500 [==============================] - 28343s 3s/step - loss: 19.3964 - SparseMAE: 4.8942
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+[12.155568727995451, 2.839757]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+[14.715951448226527, 3.4438634]

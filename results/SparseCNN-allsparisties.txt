@@ -1,0 +1,101 @@
+
+Varying sparsity, random sub-sampling
+
+
+(tensorflow2) C:\Users\ntadmin\Documents\Thesis\Thesis\code>python sparse_cnn.py
+Sleeping 2h
+2019-06-01 21:56:23.812336: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-06-01 21:56:23.823622: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library nvcuda.dll
+2019-06-01 21:56:24.138706: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties:
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 12.00GiB freeMemory: 9.95GiB
+2019-06-01 21:56:24.142511: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-06-01 21:56:24.797585: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-01 21:56:24.799660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0
+2019-06-01 21:56:24.801002: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N
+2019-06-01 21:56:24.802498: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9615 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+-------------------------------Sparsity rate: 0.2----------------------------------------
+Epoch 1/2
+8500/8500 [==============================] - 22840s 3s/step - loss: 7.0315 - SparseMAE: 2.9125
+Epoch 2/2
+8500/8500 [==============================] - 22963s 3s/step - loss: 6.4386 - SparseMAE: 1.4399
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+[4.01930652462445, 0.7765988]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+[4.70348381042087, 0.851025]
+-------------------------------Sparsity rate: 0.1----------------------------------------
+Epoch 1/2
+8500/8500 [==============================] - 22964s 3s/step - loss: 7.1513 - SparseMAE: 2.9345
+Epoch 2/2
+8500/8500 [==============================] - 23021s 3s/step - loss: 6.6257 - SparseMAE: 1.3606
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+[4.161528530111214, 0.73064476]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+[4.883426373777348, 0.80953145]
+-------------------------------Sparsity rate: 0.05----------------------------------------
+Epoch 1/2
+8500/8500 [==============================] - 22959s 3s/step - loss: 7.5663 - SparseMAE: 3.0264
+Epoch 2/2
+8500/8500 [==============================] - 23448s 3s/step - loss: 7.0604 - SparseMAE: 1.3813
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+[4.465010542173033, 0.7893972]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+[5.259437877025016, 0.87715524]
+-------------------------------Sparsity rate: 0.02----------------------------------------
+Epoch 1/2
+8500/8500 [==============================] - 23632s 3s/step - loss: 8.6273 - SparseMAE: 3.0101
+Epoch 2/2
+8500/8500 [==============================] - 23598s 3s/step - loss: 8.2085 - SparseMAE: 1.5728
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+[5.194539884014989, 0.8926848]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+[6.166244579095914, 1.0167611]
+
+
+
+ran the last sparsity later: 0.01:
+
+(tensorflow2) C:\Users\ntadmin\Documents\Thesis\Thesis\code>python sparse_cnn.py
+2019-06-04 09:55:53.262727: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX22019-06-04 09:55:53.355854: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library nvcuda.dll
+2019-06-04 09:55:53.719120: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties:
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 12.00GiB freeMemory: 9.95GiB
+2019-06-04 09:55:53.725317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-06-04 09:55:54.466233: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-04 09:55:54.469752: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0
+2019-06-04 09:55:54.473365: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N
+2019-06-04 09:55:54.477339: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9615 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)-------------------------------Sparsity rate: 0.01----------------------------------------Epoch 1/2
+8500/8500 [==============================] - 23912s 3s/step - loss: 11.1828 - SparseMAE: 3.3186
+Epoch 2/2
+8500/8500 [==============================] - 22574s 3s/step - loss: 10.7780 - SparseMAE: 2.0733
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+[6.561654590982212, 1.1628006]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+[8.140899990651473, 1.388543]
+
+
+added another sparsity rate: 0.005
+
+(tensorflow2) C:\Users\ntadmin\Documents\Thesis\Thesis\code>python sparse_cnn.py
+2019-06-06 09:47:48.718266: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-06-06 09:47:48.804434: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library nvcuda.dll
+2019-06-06 09:47:49.150820: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties:
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 12.00GiB freeMemory: 9.95GiB
+2019-06-06 09:47:49.155431: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-06-06 09:47:49.823869: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-06 09:47:49.825971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0
+2019-06-06 09:47:49.827406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N
+2019-06-06 09:47:49.829072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9615 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+-------------------------------Sparsity rate: 0.005----------------------------------------
+Epoch 1/2
+8500/8500 [==============================] - 25266s 3s/step - loss: 18.7385 - SparseMAE: 5.3572
+Epoch 2/2
+8500/8500 [==============================] - 24909s 3s/step - loss: 18.2814 - SparseMAE: 4.6171
+Sparse CNN eval on SYNTHIA-SEQS-05-DAWN1.txt length: 866
+[10.356303298170516, 2.4911919]
+Sparse CNN eval on SYNTHIA-SEQS-06-DAWN1.txt length: 909
+[13.023180790335694, 3.070059]

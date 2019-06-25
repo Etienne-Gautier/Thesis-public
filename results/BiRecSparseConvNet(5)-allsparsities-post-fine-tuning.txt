@@ -1,0 +1,160 @@
+
+(tensorflow2) C:\Users\ntadmin\Documents\Thesis\Thesis\code>python recurrent_sparse_cnn_training.py
+sleep 5h
+is birecurrent:  True
+2019-06-09 22:21:41.544327: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-06-09 22:21:41.560721: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library nvcuda.dll
+2019-06-09 22:21:41.887007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties:
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 12.00GiB freeMemory: 9.95GiB
+2019-06-09 22:21:41.893415: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-06-09 22:21:42.537991: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-09 22:21:42.541555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0
+2019-06-09 22:21:42.544100: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N
+2019-06-09 22:21:42.546688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9615 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.005
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3764s 3s/step - loss: 13.1899 - SparseMAE: 2.4903
+Recurrent layer at depth 4 sparsity rate 0.005
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2436s 3s/step - loss: 9.7437 - SparseMAE: 2.5871
+Recurrent layer at depth 4 sparsity rate 0.005
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2403s 3s/step - loss: 9.3207 - SparseMAE: 2.2487
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.005
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[10.240437838628337, 2.5336428]
+Recurrent layer at depth  4 sparsity rate 0.005
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[11.55948289450106, 2.788583]
+-----------Testing: End------------
+
+Rest of the sparsity levels
+
+(tensorflow2) C:\Users\ntadmin\Documents\Thesis\Thesis\code>python recurrent_sparse_cnn_training.py
+is birecurrent:  True
+2019-06-07 15:02:07.935389: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-06-07 15:02:07.947664: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library nvcuda.dll
+2019-06-07 15:02:08.265984: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties:
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 12.00GiB freeMemory: 9.95GiB
+2019-06-07 15:02:08.272529: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-06-07 15:02:08.973219: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-07 15:02:08.975278: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0
+2019-06-07 15:02:08.976637: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N
+2019-06-07 15:02:08.978186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9615 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.01
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3789s 3s/step - loss: 7.5028 - SparseMAE: 1.2403
+Recurrent layer at depth 4 sparsity rate 0.01
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2461s 3s/step - loss: 6.1658 - SparseMAE: 1.4695
+Recurrent layer at depth 4 sparsity rate 0.01
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2440s 3s/step - loss: 5.9571 - SparseMAE: 1.4268
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.01
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[6.750894921728307, 1.5604696]
+Recurrent layer at depth  4 sparsity rate 0.01
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[8.173489668666331, 1.7636523]
+-----------Testing: End------------
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.02
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3786s 3s/step - loss: 6.0614 - SparseMAE: 1.0148
+Recurrent layer at depth 4 sparsity rate 0.02
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2451s 3s/step - loss: 4.9230 - SparseMAE: 1.1344
+Recurrent layer at depth 4 sparsity rate 0.02
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2421s 3s/step - loss: 4.7260 - SparseMAE: 1.1283
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.02
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[5.3623255135974395, 1.3812377]
+Recurrent layer at depth  4 sparsity rate 0.02
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[6.463833142667516, 1.5637573]
+-----------Testing: End------------
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.05
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3766s 3s/step - loss: 5.3456 - SparseMAE: 0.9739
+Recurrent layer at depth 4 sparsity rate 0.05
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2445s 3s/step - loss: 4.5171 - SparseMAE: 1.0138
+Recurrent layer at depth 4 sparsity rate 0.05
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2416s 3s/step - loss: 4.3638 - SparseMAE: 0.9863
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.05
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[4.855810890871066, 0.9603999]
+Recurrent layer at depth  4 sparsity rate 0.05
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[5.684090238487576, 1.0831666]
+-----------Testing: End------------
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.1
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3779s 3s/step - loss: 5.0602 - SparseMAE: 0.9787
+Recurrent layer at depth 4 sparsity rate 0.1
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2441s 3s/step - loss: 4.2631 - SparseMAE: 0.9472
+Recurrent layer at depth 4 sparsity rate 0.1
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2411s 3s/step - loss: 4.1925 - SparseMAE: 0.9940
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.1
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[4.680377361192195, 1.1312872]
+Recurrent layer at depth  4 sparsity rate 0.1
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[5.50511182964571, 1.2554513]
+-----------Testing: End------------
+
+
+(tensorflow2) C:\Users\ntadmin\Documents\Thesis\Thesis\code>python recurrent_sparse_cnn_training.py
+is birecurrent:  True
+2019-06-07 11:02:10.194110: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-06-07 11:02:10.208674: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library nvcuda.dll
+2019-06-07 11:02:10.520976: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties:
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 12.00GiB freeMemory: 9.95GiB
+2019-06-07 11:02:10.527073: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-06-07 11:02:11.171476: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-07 11:02:11.174967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0
+2019-06-07 11:02:11.177582: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N
+2019-06-07 11:02:11.179995: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9615 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.2
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3839s 3s/step - loss: 4.7782 - SparseMAE: 0.8834
+Recurrent layer at depth 4 sparsity rate 0.2
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2489s 3s/step - loss: 4.0810 - SparseMAE: 0.9966
+Recurrent layer at depth 4 sparsity rate 0.2
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2450s 3s/step - loss: 4.1355 - SparseMAE: 1.0246
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.2
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[4.53639679402113, 0.9954048]
+Recurrent layer at depth  4 sparsity rate 0.2
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[5.368597512142661, 1.0892406]
+-----------Testing: End------------

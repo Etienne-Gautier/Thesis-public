@@ -1,0 +1,8 @@
+.vscode/
+datasets/
+*__pycache__
+*.mypy_cache/
+output/
+logs/
+model_checkpoints/
+logs-recurrent/

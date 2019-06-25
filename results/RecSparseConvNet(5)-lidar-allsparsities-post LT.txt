@@ -1,0 +1,121 @@
+(tensorflow2) C:\Users\ntadmin\Documents\Thesis\Thesis\code>python recurrent_sparse_cnn_training.py
+sleep 50h
+is birecurrent:  False
+2019-06-14 20:17:37.065151: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-06-14 20:17:37.079724: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library nvcuda.dll
+2019-06-14 20:17:37.381901: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties:
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 12.00GiB freeMemory: 9.95GiB
+2019-06-14 20:17:37.385555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-06-14 20:17:38.016882: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-14 20:17:38.019100: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0
+2019-06-14 20:17:38.020609: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N
+2019-06-14 20:17:38.022193: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9615 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.5
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3978s 3s/step - loss: 5.0967 - SparseMAE: 0.9473
+Recurrent layer at depth 4 sparsity rate 0.5
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2571s 3s/step - loss: 4.0212 - SparseMAE: 1.0210
+Recurrent layer at depth 4 sparsity rate 0.5
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2546s 3s/step - loss: 4.1899 - SparseMAE: 0.9795
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.5
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[4.84673401237362, 1.1049781]
+Recurrent layer at depth  4 sparsity rate 0.5
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[6.219008631683894, 1.2457502]
+-----------Testing: End------------
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.25
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3984s 3s/step - loss: 4.7756 - SparseMAE: 0.8031
+Recurrent layer at depth 4 sparsity rate 0.25
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2588s 3s/step - loss: 3.9099 - SparseMAE: 0.8597
+Recurrent layer at depth 4 sparsity rate 0.25
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2547s 3s/step - loss: 3.8850 - SparseMAE: 0.8410
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.25
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[4.42206405468837, 0.8781118]
+Recurrent layer at depth  4 sparsity rate 0.25
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[5.370241006719238, 1.0196488]
+-----------Testing: End------------
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.125
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 3974s 3s/step - loss: 5.9588 - SparseMAE: 1.0544
+Recurrent layer at depth 4 sparsity rate 0.125
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 2585s 3s/step - loss: 4.5491 - SparseMAE: 1.0239
+Recurrent layer at depth 4 sparsity rate 0.125
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 2558s 3s/step - loss: 4.5168 - SparseMAE: 0.9896
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.125
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+[5.1776093216268, 1.1277361]
+Recurrent layer at depth  4 sparsity rate 0.125
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+[6.177869658551642, 1.2483544]
+-----------Testing: End------------
+
+had a bugwith file name length because 1/15 is not a decial number. After fix, ran other sparsities:
+
+(tensorflow2) C:\Workspace\Thesis\code>python recurrent_sparse_cnn_training.py
+is birecurrent:  False
+2019-06-23 13:51:18.979313: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to
+use: AVX2
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.06666666666666667
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 9087s 6s/step - loss: 7.1730 - SparseMAE: 1.2878
+Recurrent layer at depth 4 sparsity rate 0.06666666666666667
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 5730s 6s/step - loss: 5.4749 - SparseMAE: 1.2826
+Recurrent layer at depth 4 sparsity rate 0.06666666666666667
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 5612s 6s/step - loss: 5.2126 - SparseMAE: 1.1736
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.06666666666666667
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+864/864 [==============================] - 4017s 5s/step - loss: 6.0404 - SparseMAE: 1.2993
+[6.040369354257429, 1.2992843]
+Recurrent layer at depth  4 sparsity rate 0.06666666666666667
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+907/907 [==============================] - 4104s 5s/step - loss: 7.3895 - SparseMAE: 1.4827
+[7.389485279806657, 1.4827118]
+-----------Testing: End------------
+-----------Training Start------------
+Recurrent layer at depth 4 sparsity rate 0.04
+Sequence SYNTHIA-SEQS-01-DAWN1.txt length: 1451
+1449/1449 [==============================] - 9611s 7s/step - loss: 15.9162 - SparseMAE: 3.1307
+Recurrent layer at depth 4 sparsity rate 0.04
+Sequence SYNTHIA-SEQS-02-DAWN1.txt length: 941
+939/939 [==============================] - 5330s 6s/step - loss: 10.7168 - SparseMAE: 3.0919
+Recurrent layer at depth 4 sparsity rate 0.04
+Sequence SYNTHIA-SEQS-04-FOG1.txt length: 929
+927/927 [==============================] - 5268s 6s/step - loss: 10.5284 - SparseMAE: 2.6785
+-----------Training: End------------
+-----------Testing: Start------------
+Recurrent layer at depth  4 sparsity rate 0.04
+Sequence:  SYNTHIA-SEQS-05-DAWN1.txt length:  866
+864/864 [==============================] - 3310s 4s/step - loss: 12.4008 - SparseMAE: 3.2453
+[12.400775776417166, 3.2452877]
+Recurrent layer at depth  4 sparsity rate 0.04
+Sequence:  SYNTHIA-SEQS-06-DAWN1.txt length:  909
+907/907 [==============================] - 3474s 4s/step - loss: 14.7687 - SparseMAE: 3.7887
+[14.768677383431264, 3.7887478]
+-----------Testing: End------------
+
